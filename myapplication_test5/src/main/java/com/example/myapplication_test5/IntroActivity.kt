@@ -9,7 +9,6 @@ import androidx.appcompat.app.AppCompatActivity
 class IntroActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_intro)
         val handler = Handler()
         handler.postDelayed(Runnable {
             val intent = Intent(applicationContext, MainActivity::class.java)
@@ -17,10 +16,8 @@ class IntroActivity : AppCompatActivity() {
             finish()
         }, 3000) // 3초 있다 메인액티비티로
 
+        setContentView(R.layout.activity_intro)
     }
 
-    override fun onPause() {
-        super.onPause()
-        finish()
-    }
+
 }
