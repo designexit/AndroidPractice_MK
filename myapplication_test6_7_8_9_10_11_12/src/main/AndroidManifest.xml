@@ -9,7 +9,10 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.MyApplication_231020_test1">
         <activity
-            android:name=".ch6_test.TestActivity"
+            android:name=".ch7_test.TestActivity_7"
+            android:exported="true" />
+        <activity
+            android:name=".ch6_test.TestActivity_6"
             android:exported="true" />
         <activity
             android:name=".MainActivity"

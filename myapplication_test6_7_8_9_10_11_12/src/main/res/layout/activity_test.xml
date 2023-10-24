@@ -13,7 +13,7 @@
         xmlns:tools="http://schemas.android.com/tools"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        tools:context=".ch6_test.TestActivity">
+        tools:context=".ch6_test.TestActivity_6">
 
         <LinearLayout
             android:id="@+id/lay1"
@@ -29,6 +29,7 @@
                 android:text="Button A"
                 android:layout_weight="1"
                 android:layout_margin="3dp"
+
                 />
 
             <Button
@@ -113,13 +114,22 @@
                 android:layout_width="150dp"
                 android:layout_height="150dp"
                 android:src="@drawable/rose1"
+                android:layout_gravity="center"
                 />
-            <Button
+            <ImageView
+                android:id="@+id/nova"
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                android:src="@drawable/nova1"
+                android:layout_gravity="center"
+                />
+            <!--<Button
                 android:id="@+id/frameBtn"
                 android:layout_width="200dp"
                 android:layout_height="50dp"
                 android:text="BTN"
-                />
+                android:layout_gravity="center"
+                />-->
 
         </FrameLayout>
 
@@ -129,14 +139,30 @@
             android:layout_height="400dp"
             android:orientation="horizontal"
             android:rowCount="2"
-            android:columnCount="3"
+            android:columnCount="4"
             app:layout_constraintTop_toBottomOf="@id/lay4"
             >
             <Button android:text="A" />
             <Button android:text="B" />
             <Button android:text="C" />
-            <Button android:text="D" />
-            <Button android:text="E" />
+            <Button android:text="D"
+                android:layout_row="1"
+                android:layout_column="1"
+                />
+            <Button android:text="E"
+                android:layout_gravity="fill_horizontal"
+                />
+            <Button android:text="F"
+                android:layout_row="1"
+                android:layout_column="1"/>
+            <Button android:text="G" />
+            <Button android:text="H" />
+            <Button android:text="I"
+                android:layout_column="1"
+                />
+            <Button android:text="J"
+                android:layout_gravity="fill_horizontal" />
+            <Button android:text="K" />
 
         </GridLayout>
 
