@@ -6,39 +6,58 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
+    <Chronometer
+        android:id="@+id/chronometer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="100dp"
+        android:gravity="center_horizontal"
+        android:textSize="30sp"
+        app:layout_constraintTop_toTopOf="parent"
+        />
+
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="70dp"
+        android:gravity="center_horizontal"
         android:orientation="horizontal"
-        android:padding="30dp"
         >
+        <Button
+            android:id="@+id/startButton"
+            android:layout_width="100dp"
+            android:layout_height="match_parent"
+            android:background="@drawable/round_button"
+            android:text="Start"
+            android:textColor="#FFFFFF"
+            android:textStyle="bold" />
 
         <Button
-            android:layout_width="wrap_content"
+            android:id="@+id/stopButton"
+            android:layout_width="100dp"
             android:layout_height="wrap_content"
-            android:text="Button A"
-            android:layout_weight="1"
-            android:layout_margin="3dp"
-            />
+            android:layout_marginLeft="25dp"
+            android:background="@drawable/round_button"
+            android:enabled="false"
+            android:text="Stop"
+            android:textColor="#FFFFFF"
+            android:textStyle="bold"/>
 
         <Button
-            android:layout_width="wrap_content"
+            android:id="@+id/resetButton"
+            android:layout_width="100dp"
             android:layout_height="wrap_content"
-            android:text="Button B"
-            android:layout_weight="1"
-            android:layout_margin="3dp"
-            />
+            android:layout_marginLeft="25dp"
+            android:background="@drawable/round_button"
+            android:enabled="false"
+            android:text="Reset"
+            android:textColor="#FFFFFF"
+            android:textStyle="bold"/>
 
-        <TextView
-            android:layout_width="150dp"
-            android:layout_height="150dp"
-            android:text="Hello World!"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
 
     </LinearLayout>
+
 
 
 
