@@ -3,14 +3,14 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ch11_test.ThreeFragment">
+    tools:context=".ch11_test.FourFragment">
 
     <!-- TODO: Update blank fragment layout -->
     <TextView
         android:layout_width="match_parent"
         android:layout_height="300dp"
-        android:text="ThreeFragment"
-        android:background="#D18E69"
+        android:text="FourFragment"
+        android:background="#93C595"
         android:textSize="@dimen/text_size"/>
 
 </FrameLayout>

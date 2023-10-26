@@ -19,14 +19,23 @@ class TestActivity_11_Fragment : AppCompatActivity() {
         // 프래그먼트 출력하기
         val fragmentManager : FragmentManager = supportFragmentManager
         val transaction : FragmentTransaction = fragmentManager.beginTransaction()
+
         // 첫번째 프래그먼트
         val onefragment = OneFragment()
 
         // 두번째 프래그먼트
         val twofragment = TwoFragment()
 
-        // 번째 프래그먼트
+        // 세번째 프래그먼트
         val threefragment = ThreeFragment()
+
+        // 네번째 프래그먼트
+        val fourfragment = FourFragment()
+
+        // 다섯번째 프래그먼트
+        val fivefragment = FiveFragment()
+
+
 
         // 첫번째 프래그먼트 붙이기
         transaction.add(R.id.fragment1,onefragment)
@@ -36,6 +45,14 @@ class TestActivity_11_Fragment : AppCompatActivity() {
 
         // 세번째 프래그먼트 붙이기
         transaction.add(R.id.fragment3,threefragment)
+
+        // 네번째 프래그먼트 붙이기
+        transaction.add(R.id.fragment4,fourfragment)
+
+        // 다섯번째 프래그먼트 붙이기
+        transaction.add(R.id.fragment5,fivefragment)
+
+
 
         // 화면에 출력
         transaction.commit()
