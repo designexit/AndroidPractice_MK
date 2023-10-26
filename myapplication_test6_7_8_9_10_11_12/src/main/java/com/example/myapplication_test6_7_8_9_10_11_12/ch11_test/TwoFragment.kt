@@ -6,16 +6,15 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import com.example.myapplication_test6_7_8_9_10_11_12.R
-import com.example.myapplication_test6_7_8_9_10_11_12.databinding.FragmentOneBinding
+import com.example.myapplication_test6_7_8_9_10_11_12.databinding.FragmentTwoBinding
 
-class OneFragment : Fragment() {
-    //베이스 엑티비티 위에 출력되기 위한 프래그먼트
-    lateinit var binding : FragmentOneBinding
+class TwoFragment : Fragment() {
+    lateinit var binding : FragmentTwoBinding
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        binding = FragmentOneBinding.inflate(layoutInflater,container,false)
+        binding = FragmentTwoBinding.inflate(layoutInflater, container, false)
         return binding.root
     }
 
