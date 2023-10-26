@@ -22,6 +22,15 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.MyApplication_231020_test1">
         <activity
+            android:name=".ch11_test.TestActivity_11_Fragment"
+            android:exported="true" />
+        <activity
+            android:name=".ch11_test.TestActivity_11_ToolBar"
+            android:exported="true" />
+        <activity
+            android:name=".ch11_test.TestActivity_11"
+            android:exported="true" />
+        <activity
             android:name=".ch10_test.TestActivity_10"
             android:exported="true" />
         <activity

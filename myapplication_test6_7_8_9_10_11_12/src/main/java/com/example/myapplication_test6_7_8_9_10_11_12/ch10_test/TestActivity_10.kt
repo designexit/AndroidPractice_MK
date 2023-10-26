@@ -11,13 +11,16 @@ import android.app.TimePickerDialog
 import android.content.DialogInterface
 import android.content.Intent
 import android.content.pm.PackageManager
+import android.graphics.BitmapFactory
 import android.graphics.Color
 import android.media.AudioAttributes
 import android.media.RingtoneManager
 import android.net.Uri
 import android.os.Build
+import android.os.Build.VERSION_CODES.N
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.os.SystemClock
 import android.util.Log
 import android.widget.DatePicker
 import android.widget.TimePicker
@@ -30,6 +33,7 @@ import androidx.core.content.ContextCompat
 import com.example.myapplication_test6_7_8_9_10_11_12.R
 import com.example.myapplication_test6_7_8_9_10_11_12.ch9_test.TestActivity_9
 import com.example.myapplication_test6_7_8_9_10_11_12.databinding.ActivityTest10Binding
+import kotlin.concurrent.thread
 
 class TestActivity_10 : AppCompatActivity() {
     lateinit var activityTest10Binding: ActivityTest10Binding
@@ -258,6 +262,7 @@ class TestActivity_10 : AppCompatActivity() {
                 val channel = NotificationChannel(
                     channelId,
                     channelName,
+                    // 전달하려는 메시지 전달 강도(레벨)
                     NotificationManager.IMPORTANCE_HIGH
                 )
                 //채널의 정보 및 부가 옵션 설정
@@ -265,6 +270,7 @@ class TestActivity_10 : AppCompatActivity() {
                 // 알림 갯수 아이콘 표
                 channel.setShowBadge(true)
                 val uri: Uri = RingtoneManager.getDefaultUri(RingtoneManager.TYPE_NOTIFICATION)
+                Log.d("KMK", "uri 위치 : ${uri}" )
                 val audioAttributes = AudioAttributes.Builder()
                     .setContentType(AudioAttributes.CONTENT_TYPE_SONIFICATION)
                     .setUsage(AudioAttributes.USAGE_ALARM)
@@ -321,6 +327,37 @@ class TestActivity_10 : AppCompatActivity() {
                     replyPendingIntent
                 ).addRemoteInput(remoteInput).build()
             )
+
+
+            // progress 진행바 확인
+//            builder.setProgress(100, 0, false)
+//                thread {
+//                    for(i in 1..100){
+//                        builder.setProgress(100, i, false)
+//                        manager.notify(11, builder.build())
+//                        SystemClock.sleep(100)
+//                    }
+//                }
+
+            // 큰 이미지를 첨부해서 알림 보내기
+            val bigPicture = BitmapFactory.decodeResource(resources,R.drawable.programming4)
+            val bigStyle = NotificationCompat.BigPictureStyle()
+            bigStyle.bigPicture(bigPicture)
+            builder.setStyle(bigStyle)
+
+
+            // 긴 텍스트
+            val bigTextStyle = NotificationCompat.BigTextStyle()
+            bigTextStyle.bigText(resources.getString(R.string.long_text))
+            builder.setStyle(bigTextStyle)
+
+            // 박스 스타일
+            val style = NotificationCompat.InboxStyle()
+            style.addLine("1코스 - 1")
+            style.addLine("2코스 - 2")
+            style.addLine("3코스 - 3")
+            style.addLine("4코스 - 4")
+            builder.setStyle(style)
 
 
             // 알림 발생 시키기
