@@ -52,6 +52,14 @@ class TestActivity_11_Fragment : AppCompatActivity() {
         // 다섯번째 프래그먼트 붙이기
         transaction.add(R.id.fragment5,fivefragment)
 
+        // 백스텍 화면에 출력 시 task 라는 공간을 사용해서 (메모리 사용함) 출력하고
+        // 화면 전환이 발생할 경우 매번 프래그먼트 소멸 시키고, 생성하고를 반복하게 되면 자원이 비효율적 임
+        // 그래서 잠시 keep 하고 있다가 다시 그려주기
+        // 엑티비티에서도 기존 엑티비티를 최대한 활용하는 방안
+        transaction.addToBackStack(null)
+
+        // 뷰 페이져 등을 이용해서 프래그먼트 전환활 때 다시 재 확인하기
+
 
 
         // 화면에 출력

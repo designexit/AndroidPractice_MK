@@ -22,6 +22,18 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.MyApplication_231020_test1">
         <activity
+            android:name=".ch11_test.viewPagerRecycler.TestPagerRecyclerActivity"
+            android:exported="true" />
+        <activity
+            android:name=".ch11_test.viewPager.TestActivity_viewpager"
+            android:exported="true" />
+        <activity
+            android:name=".ch11_test.recyclerDataTest.TestActivity_recycleData"
+            android:exported="true" />
+        <activity
+            android:name=".ch11_test.TestActivity_11_RecyclerView"
+            android:exported="true" />
+        <activity
             android:name=".ch11_test.TestActivity_11_Fragment"
             android:exported="true" />
         <activity
