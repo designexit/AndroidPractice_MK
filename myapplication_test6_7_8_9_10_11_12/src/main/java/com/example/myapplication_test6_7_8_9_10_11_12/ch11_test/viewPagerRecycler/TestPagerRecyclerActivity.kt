@@ -26,7 +26,6 @@ class TestPagerRecyclerActivity : AppCompatActivity() {
         binding = ActivityTestPagerRecyclerBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-
         //1)tool bar, 2)드로워, 3)드로워 네비게이션, 4)플로팅 액션버튼, 5)앱바, 6)탭 레이아웃
         //1)툴바 붙이기 : TestActivity_11_ToolBar 재사용
         setSupportActionBar(binding.toolbar)
